@@ -1,0 +1,7 @@
+Flask==1.1.2
+gunicorn==20.0.4
+MarkupSafe==1.0
+Werkzeug==1.0.1
+youtube-data-api==0.0.20
+youtube-dl==2018.3.14
+
