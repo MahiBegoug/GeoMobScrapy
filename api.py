@@ -18,10 +18,10 @@ def country_name():
     # check if an name Country provided
     # if ID is provided, assing it to a variable
     # if no ID is provided, display an error in the browser
-    if 'name' and 'max' in request.args:
+    if 'name' in request.args:
             country_name = str(request.args['name'])
-            max_results = int(request.args['name'])
-            return jsonify(yt.search(q=country_name, max_results=max_results))
+            # max_results = int(request.args['name'])
+            return jsonify(yt.search(q=country_name, max_results=3))
     else:
         return jsonify("Error: No name field provided. Please specify an Name Country.")
 
