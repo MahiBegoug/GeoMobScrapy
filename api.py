@@ -25,5 +25,6 @@ def country_name():
     else:
         return jsonify("Error: No name field provided. Please specify an Name Country.")
 
+if __name__ == '__main__':
 
-app.run()
+    app.run()

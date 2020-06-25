@@ -3,8 +3,6 @@ gunicorn
 Werkzeug
 youtube-data-api
 youtube-dl
-gevent>=1.4
-libevent-dev
-python-all-dev
-greenlet
+
+
 
