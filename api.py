@@ -9,6 +9,10 @@ app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
 
+@app.route("/")
+def home_view():
+        return "<h1>Welcome to Geeks for Geeks</h1>"
+
 @app.route('/api/country', methods=['GET'])
 def country_name():
     # check if an name Country provided
