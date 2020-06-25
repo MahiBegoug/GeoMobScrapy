@@ -1,19 +1,6 @@
-
-
-
-
-Flask==1.1.2
-
-gunicorn==20.0.4
-
-
-
-
-
-
-Werkzeug==1.0.1
-
-
-youtube-data-api==0.0.20
-youtube-dl==2018.3.14
+Flask
+gunicorn
+Werkzeug
+youtube-data-api
+youtube-dl
 
