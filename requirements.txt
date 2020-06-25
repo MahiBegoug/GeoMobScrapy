@@ -3,4 +3,5 @@ gunicorn
 Werkzeug
 youtube-data-api
 youtube-dl
+gevent>=1.4
 
