@@ -1,7 +1,7 @@
 import flask
 from flask import request, jsonify
 from youtube_api import  YouTubeDataAPI
-from twitter_scraper import get_tweets
+# from twitter_scraper import get_tweets
 import wikipedia
 import twitter_scraper
 
@@ -22,7 +22,7 @@ def home_view():
 def twitter_name():
     if 'name' in request.args:
         country_name = str(request.args['name'])
-        return jsonify(get_tweets(country_name))
+        # return jsonify(get_tweets(country_name))
 
 
 @app.route("/api/wiki",methods=['GET'])
