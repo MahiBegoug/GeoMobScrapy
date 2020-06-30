@@ -22,7 +22,7 @@ def home_view():
 def twitter_name():
     # if 'name' in request.args:
         # country_name = str(request.args['name'])
-    return jsonify(get_tweets('twitter',pages=1))
+    return get_tweets('twitter',pages=1)
 
 
 @app.route("/api/wiki",methods=['GET'])
