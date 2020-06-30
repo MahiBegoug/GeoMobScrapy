@@ -20,9 +20,24 @@ def home_view():
 
 @app.route("/api/twitter",methods=['GET'])
 def twitter_name():
-    # if 'name' in request.args:
-        # country_name = str(request.args['name'])
-    return jsonify(get_tweets('twitter',pages=1)[0]['text'])
+  if 'name' in request.args:
+    country_name = str(request.args['name'])
+    tweets = []
+    for tweet in get_tweets(country_name, pages=1):
+        scraped_tweet = {
+            'tweetId': tweet['tweetId'],
+            'username': tweet['username'],
+            'tweetUrl': tweet['tweetUrl'],
+            'isRetweet': tweet['isRetweet'],
+            'time': tweet['time'],
+            'text': tweet['text'],
+            'replies': tweet['replies'],
+            'retweets': tweet['retweets'],
+            'likes': tweet['likes'],
+            'entries': tweet['entries']
+        }
+        tweets.append(scraped_tweet)
+    return jsonify(tweets)
 
 
 @app.route("/api/wiki",methods=['GET'])
