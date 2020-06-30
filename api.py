@@ -18,7 +18,7 @@ def home_view():
         return "<h1>Welcome to Geeks for Geeks</h1>"
 
 
-@app.route("api/twitter",methods=['GET'])
+@app.route("/api/twitter",methods=['GET'])
 def twitter_name():
     if 'name' in request.args:
         country_name = str(request.args['name'])
