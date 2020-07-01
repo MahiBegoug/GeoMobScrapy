@@ -39,7 +39,7 @@ def twitter_name():
         }
         tweets.append(scraped_tweet)
     if len(tweets) >= 5 :
-        return jsonify(tweets[:4])
+        return jsonify(tweets[:5])
     else:
         return jsonify(tweets)
 
