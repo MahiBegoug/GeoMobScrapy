@@ -2,6 +2,7 @@ import flask
 from flask import request, jsonify
 from youtube_api import  YouTubeDataAPI
 from twitter_scraper import get_tweets
+from twitter_scraper import get_trends
 import wikipedia
 # import twitter_scraper
 
@@ -23,7 +24,7 @@ def twitter_name():
   if 'name' in request.args:
     country_name = str(request.args['name'])
     tweets = []
-    for tweet in get_tweets(country_name, pages=1):
+    for tweet in get_tweets('#'+country_name, pages=1):
         scraped_tweet = {
             'tweetId': tweet['tweetId'],
             'username': tweet['username'],
