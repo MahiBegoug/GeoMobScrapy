@@ -38,8 +38,10 @@ def twitter_name():
             'entries': tweet['entries']
         }
         tweets.append(scraped_tweet)
-    return jsonify(tweets)
-
+    if len(tweets) >= 5 :
+        return jsonify(tweets[:4])
+    else:
+        return jsonify(tweets)
 
 @app.route("/api/wiki",methods=['GET'])
 def wiki_name():
